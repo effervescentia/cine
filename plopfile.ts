@@ -1,4 +1,3 @@
-import fs from 'node:fs/promises';
 import { usePlugins } from '@bltx/plop';
 import type { NodePlopAPI } from 'plop';
 
