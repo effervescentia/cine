@@ -1,0 +1,10 @@
+apiVersion: v2
+name: cine-web
+description: frontend of cine
+
+type: application
+
+# chart version
+version: '1.0.0'
+# application version
+appVersion: '1.0.0'

@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "cine-web.fullname" . }}-test-connection"
+  labels:
+    app.kubernetes.io/component: test
+    {{- include "cine-web.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+    "helm.sh/hook-delete-policy": hook-succeeded
+spec:
+  containers:
+    - name: index-html
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "cine-web.fullname" . }}:{{ .Values.service.port }}/index.html']
+    - name: env-js
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "cine-web.fullname" . }}:{{ .Values.service.port }}/env.js']
+  restartPolicy: Never

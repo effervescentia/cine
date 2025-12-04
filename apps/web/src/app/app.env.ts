@@ -2,7 +2,7 @@ import z from 'zod';
 
 declare global {
   interface Window {
-    __app___env?: unknown;
+    cine_env?: unknown;
   }
 }
 
@@ -27,7 +27,7 @@ class AppEnvironment {
     }
 
     try {
-      this.value = EnvironmentDTO.parse(window.__app___env);
+      this.value = EnvironmentDTO.parse(window.cine_env);
     } catch (err) {
       console.error('environment failed to initialize, subsequent attempts will be ignored');
       this.failed = true;

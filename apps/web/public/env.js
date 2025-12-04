@@ -1,0 +1,1 @@
+window.cine_env = {};

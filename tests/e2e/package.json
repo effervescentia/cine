@@ -1,5 +1,5 @@
 {
-  "name": "@app/test-e2e",
+  "name": "@cine/test-e2e",
   "private": true,
   "scripts": {
     "dev": "playwright test --ui"
