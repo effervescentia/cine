@@ -1,0 +1,11 @@
+node_modules
+build
+
+.turbo
+
+*.report.xml
+
+**/k8s/charts
+/k8s/*/charts
+
+*.pem
