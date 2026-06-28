@@ -32,13 +32,13 @@ web:
   origin: https://app.cine.localhost:1337
 
 postgres:
-  hostname: db-postgres
+  hostname: db-cine-postgres
   port: 5432
   database: cine
   username: cine
 
 redis:
-  hostname: db-redis-master
+  hostname: db-cine-redis-master
   port: 6379
   username: default
 

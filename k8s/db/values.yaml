@@ -8,12 +8,12 @@ migration:
     tag: ''
 
   postgres:
-    hostname: db-postgres
+    hostname: db-cine-postgres
     port: 5432
     database: cine
     username: postgres
 
-postgres:
+cine-postgres:
   auth:
     database: cine
     username: cine
@@ -34,7 +34,7 @@ postgres:
           ALTER DEFAULT PRIVILEGES IN SCHEMA public
             GRANT ALL PRIVILEGES ON SEQUENCES TO cine;
 
-redis:
+cine-redis:
   architecture: standalone
   auth:
     existingSecret: redis-secrets
